@@ -9,8 +9,6 @@ const CartScreen = ({ match, location, history }) => {
     const productId = match.params.id;
 
     const qty = location.search ? Number(location.search.split('=')[1]) : 1
-    console.log(qty, "qty")
-    console.log(productId, "productId")
     const dispatch = useDispatch();
     const cart = useSelector(state => state.cart);
     const { cartItems } = cart;
@@ -22,12 +20,10 @@ const CartScreen = ({ match, location, history }) => {
     }, [dispatch, productId, qty] )
 
     const removeFromCartHandler = (id) => {
-        // console.log(id)
         dispatch(removeFromCart(id))
     } 
 
     const checkoutHandler = () => {
-        // console.log('checkout')
         history.push('/login?redirect=shipping')
     }
 

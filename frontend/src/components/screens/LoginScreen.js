@@ -16,7 +16,6 @@ const LoginScreen = ({ history ,location }) => {
     const dispatch = useDispatch();
 
     const userLogin = useSelector(state => state.userLogin)
-    console.log(userLogin)
     const { loading, error, userInfo } = userLogin;
  
     const redirect = location.search ? location.search.split('=')[1] : '/';
@@ -30,7 +29,6 @@ const LoginScreen = ({ history ,location }) => {
     const submitHandler = (e) => {
         e.preventDefault()
         // DISPATCH LOGIN
-        console.log( email, "email");
         dispatch(login( email, password ))
     };
 

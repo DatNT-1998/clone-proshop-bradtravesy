@@ -17,7 +17,6 @@ const ProductScreen = ({history,match}) => {
     }, [dispatch, match]);
     
     const productDetails = useSelector(state => state.productDetails)
-    console.log(productDetails, "test")
     const { loading, error, product = [] } = productDetails;
 
     const addToCartHandler = () => {
