@@ -133,7 +133,7 @@ const ProfileScreen = ({ history }) => {
                     <td>{order.totalPrice}</td>
                     <td>
                       {order.isPaid ? (
-                        order.paidAt.substring(0, 10)
+                        order.paidAt && order.paidAt.substring(0, 10)
                       ) : (
                         <i
                           className="fas fa-times"
@@ -143,7 +143,7 @@ const ProfileScreen = ({ history }) => {
                     </td>
                     <td>
                       {order.isDelivered ? (
-                        order.deliveredAt.substring(0, 10)
+                        order.deliveredAt && order.deliveredAt.substring(0, 10)
                       ) : (
                         <i
                           className="fas fa-times"
