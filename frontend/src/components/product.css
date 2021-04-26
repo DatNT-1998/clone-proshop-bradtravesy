@@ -1,0 +1,12 @@
+.images-fixed {
+  object-fit: cover;
+  height: 180px;
+  max-height: 180px;
+}
+
+.card-fixed {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  height: 390px;
+}

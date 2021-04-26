@@ -4,12 +4,17 @@
   "description": "MERN shopping cart app",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "15.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "start": "concurrently \"yarn run server\" \"yarn run client\"",
     "server": "nodemon backend/server",
     "client": "cd frontend && yarn start --prefix frontend",
     "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d"
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false \" yarn install --prefix frontend \" \" yarn run build --prefix frontend \" " 
   },
   "repository": {
     "type": "git",
